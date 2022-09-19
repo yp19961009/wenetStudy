@@ -302,7 +302,7 @@ def export_offline_encoder(model, configs, args, logger, encoder_onnx_path):
                       (speech, speech_lens),
                       encoder_onnx_path,
                       export_params=True,
-                      opset_version=13,
+                      opset_version=16,
                       do_constant_folding=True,
                       input_names=['speech', 'speech_lengths'],
                       output_names=['encoder_out', 'encoder_out_lens',
@@ -540,7 +540,6 @@ if __name__ == '__main__':
                         required=False,
                         help="number of left chunks, <= 0 is not supported")
     args = parser.parse_args()
-
     torch.manual_seed(0)
     torch.set_printoptions(precision=10)
 
