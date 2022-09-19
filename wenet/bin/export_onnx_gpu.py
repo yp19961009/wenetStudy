@@ -21,7 +21,7 @@ import sys
 import torch
 import yaml
 import logging
-
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.realpath(__file__)))))
 from wenet.utils.checkpoint import load_checkpoint
 from wenet.transformer.ctc import CTC
 from wenet.transformer.decoder import TransformerDecoder
