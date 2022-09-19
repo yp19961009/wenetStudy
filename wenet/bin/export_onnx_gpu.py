@@ -535,7 +535,7 @@ if __name__ == '__main__':
                         required=False,
                         help='the decoding chunk size, <=0 is not supported')
     parser.add_argument('--num_decoding_left_chunks',
-                        default=5,
+                        default=3,
                         type=int,
                         required=False,
                         help="number of left chunks, <= 0 is not supported")
